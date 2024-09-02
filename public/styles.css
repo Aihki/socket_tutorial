@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding-bottom: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+#nickname-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#nickname-section > label {
+  margin-bottom: 0.5rem;
+}
+
+#nickname-section > input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#nickname-section > button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#nickname-section > button:hover {
+  background-color: #555;
+}
+
+#join-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#join-section > label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+#join-section > select {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#join-section > select:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+#join-section > button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#join-section > button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+#form > button:hover {
+  background: #555;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages > li {
+  padding: 0.5rem 1rem;
+}
+
+#messages > li:nth-child(odd) {
+  background: #efefef;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+div > label {
+  margin-right: 0.5rem;
+}
+
+div > input, div > select, div > button {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div > input:focus, div > select:focus, div > button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
