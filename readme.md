@@ -28,3 +28,7 @@ toinen käyttäjä vaihtanut huonetta ja kirjoittaa sinne. Huoneita on valmiiksi
 menee takaisin ensimmäiseen huoneeseen
 ![Going Back to First Room](ss/GoingBackToFirstRoom.png)
 
+
+### Tree user at the same time
+kolme käyttäjää missä yksi on kerran vaihtanut kanavaa ja tullut takaisi
+![Going Back to First Room](ss/threeUsers.png)

@@ -1,4 +1,15 @@
 const socket = io();
+document.addEventListener('DOMContentLoaded', function() {
+  const roomSelect = document.getElementById('room');
+  const rooms = ['Music', 'literature', 'Sports', 'Random'];
+
+  rooms.forEach(room => {
+      const option = document.createElement('option');
+      option.value = room;
+      option.textContent = room;
+      roomSelect.appendChild(option);
+  });
+});
 
 document.getElementById('enter-chat').addEventListener('click', () => {
   const nickname = document.getElementById('nickname').value;
