@@ -3,20 +3,20 @@
 käytetty tutoriaalia. Vaihdoin var -> const. sekä tein omat tiedostot js ja tyyleille.
 
 ## Screenshots
-Nimi kentä tulee ensiksi näkymään
 ### Entering Name
+Nimi kentä tulee ensiksi näkymään
 ![Name](ss/name.png)
 
-tyhjä chat screen jossa voi valita huoneen. Tästä näkee kuka liittyy ja kuka postuu sekä kuka on laittanut viestin
 ### Chat Screen
+tyhjä chat screen jossa voi valita huoneen. 
 ![Chat Screen](ss/chatScreen.png)
 
-Keskustelua huoneessa .
 ### Chatting in a Room
+Keskustelua huoneessa. kummatkin näkee oman viestinsä ja sekä toisen laittaman. Tästä näkee myös kuka liittyy ja kuka postuu sekä kuka on laittanut tietyn viestin
 ![Chatting](ss/chating.png)
 
-toinen käyttäjä vaihtanut huonetta ja kirjoittaa sinne. Huoneita on valmiiksi tehty 4 ja ne valitaan dropvalikosta ja tämän jälkeen painaa join room.
 ### Selecting Room
+toinen käyttäjä vaihtanut huonetta ja kirjoittaa sinne. Huoneita on valmiiksi tehty 4 ja ne valitaan dropvalikosta ja tämän jälkeen painaa join room.
 ![Room](ss/room.png)
 ### Joining Another Room
 ![Joining Another Room](ss/joininAnotherRoom.png)
@@ -24,7 +24,7 @@ toinen käyttäjä vaihtanut huonetta ja kirjoittaa sinne. Huoneita on valmiiksi
 ![Chatting Another Room](ss/ChattingAnotherRoom.png)
 
 
-menee takaisin ensimmäiseen huoneeseen
 ### Going Back to First Room
+menee takaisin ensimmäiseen huoneeseen
 ![Going Back to First Room](ss/GoingBackToFirstRoom.png)
 
