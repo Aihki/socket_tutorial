@@ -1,6 +1,6 @@
 # WebChat Application
 
-käytetty tutoriaalia. Vaihdoin var -> const. sekä tein omat tiedostot js ja tyyleille.
+käytetty tutoriaalia. Vaihdoin var -> const. sekä tein omat tiedostot js ja tyyleille. Laitettu dockerin conttiin pyörimään locaalisti.
 
 ## Screenshots
 ### Entering Name
