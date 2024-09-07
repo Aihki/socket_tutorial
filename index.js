@@ -1,24 +1,34 @@
-'use strict';
-
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const http = require('http');
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
 const path = require('path');
+const { Server } = require("socket.io");
+const { useAzureSocketIO } = require('@azure/web-pubsub-socket.io');
 
-// Serve static files from the 'public' directory
+const app = express();
+const server = http.createServer(app);
+
+app.use(cors());
+
+const io = new Server(server);
+
+
+useAzureSocketIO(io, {
+  hub: "Hub", 
+  connectionString: "Endpoint=https://schoolwork.webpubsub.azure.com;AccessKey=wFStPswOoS7lHrIjea3Sefq2H+2npVP3fuC2TrBseIo=;Version=1.0;",
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-io.on('connection', (socket) => {
+io.on('connection', async (socket) => {
   console.log('a user connected');
 
-  // Join a room
+  await socket.join("room abc");
+
   socket.on('join room', ({ nickname, room }) => {
     if (socket.currentRoom) {
       socket.leave(socket.currentRoom);
@@ -28,11 +38,9 @@ io.on('connection', (socket) => {
     socket.currentRoom = room;
     socket.nickname = nickname;
     console.log(`${nickname} joined room: ${room}`);
-    // Notify the room that a new user has joined
     io.to(room).emit('room message', `${nickname} has joined the room`);
   });
 
-  // Broadcast to a specific room, including the sender
   socket.on('room message', ({ room, msg }) => {
     io.to(room).emit('room message', msg);
   });
@@ -45,6 +53,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
 });

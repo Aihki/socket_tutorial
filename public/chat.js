@@ -1,7 +1,40 @@
-const socket = io();
+import { io } from 'https://cdn.socket.io/4.7.5/socket.io.esm.min.js';
+
+const webPubSubEndpoint = "https://schoolwork.webpubsub.azure.com";
+const socket = io(webPubSubEndpoint, {
+  path: "/clients/socketio/hubs/Hub",
+  transports: ["websocket"],
+});
+
+console.log('Connecting to WebSocket:', webPubSubEndpoint);
+
+socket.on('connect', () => {
+  console.log('WebSocket is connected');
+});
+
+socket.on('connect_error', (error) => {
+  console.error('Connection error:', error);
+});
+
+socket.on('error', (error) => {
+  console.error('WebSocket error:', error);
+});
+
+socket.on('disconnect', (reason) => {
+  console.log('WebSocket disconnected:', reason);
+});
+
+socket.on('reconnect_attempt', () => {
+  console.log('WebSocket reconnect attempt');
+});
+
+socket.on('reconnect_failed', () => {
+  console.error('WebSocket reconnect failed');
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   const roomSelect = document.getElementById('room');
-  const rooms = ['Music', 'literature', 'Sports', 'Random'];
+  const rooms = ['Music', 'Literature', 'Sports', 'Random'];
 
   rooms.forEach(room => {
       const option = document.createElement('option');
