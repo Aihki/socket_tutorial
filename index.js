@@ -15,7 +15,7 @@ const io = new Server(server);
 
 useAzureSocketIO(io, {
   hub: "Hub", 
-  connectionString: "Endpoint=https://schoolwork.webpubsub.azure.com;AccessKey=wFStPswOoS7lHrIjea3Sefq2H+2npVP3fuC2TrBseIo=;Version=1.0;",
+  connectionString: "",
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
