@@ -35,4 +35,4 @@ kolme käyttäjää missä yksi on kerran vaihtanut kanavaa ja tullut takaisi
 
 ### azure sekä Web PubSub for Socket.IO
 sain laitettua azureen sekä Web PubSub for Socket.IO. Näytti toimivan node ja dockerilla
-![Going Back to First Room](ss/Azure.png)
+![Azure](ss/Azure.png)
