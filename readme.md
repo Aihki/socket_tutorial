@@ -2,6 +2,23 @@
 
 käytetty tutoriaalia mikä opettaja oli antanut ja tästä lähetty uudistamaan tätä sekä lisätty muutamia uusia toimintoja. Vaihdoin var -> const. sekä tein omat tiedostot js ja tyyleille. Laitettu dockerin conttiin pyörimään locaalisti.
 
+nimiavaruus
+
+Nimiavaruus(namespace) jakaa yhteyden eri kanaville. Tällä saadaan loogisuutta ohjelmaan.. Esimerkiksi oletusnimiarvaruus on (‘/‘), Tässä ohjelmassa voisi käyttää tälläistä nimiavaruuksia
+    - (‘/chat’), jossa keskustelu tapahtuu
+    - (‘/rules’),jossa voisi olla palvelun säännöt
+    - (‘/admin’), admineille tarkoitettu
+
+Huoneilla sitten tarkemmin jaetaan nimiavaruuden sisällä yhteyksiä. Roomit/huoneet sopivat hyvin semmoisiin tilanteisiin kun haluat jakaa keskustelut pienempii ryhmiin ja nämä viestit näkyvät vain tähän room/huoneeseen. Esimerkiksi tässä tapauksessa ne voitaisiin jakaa aihealuettain.
+    - huone 1 Musiikki
+    - huone 2 kirjallisuus
+    - huone 3 ajankohtaiset
+    - jne.
+
+
+viimeisen osan pientä selostusta mitä tein
+Yritin saada toimimaan ensiksi dockerin kautta mutta sitten huomasin että ohjeissa käytettiin aws. Elikkä Dockerissa se toimii vaan locaalisesti. Sitten katsoin miten saisin sen suoraan Azureen Web PubSub for Socket.IO kanssa . Tein siitä ohjeiden mukaan mitä linkin kautta löysin ja lisäsin serverille tieodsto(websocket ja serveri on samassa groupissa). Vähän säätelyiden jälkeen näytti toimivan monellilla node ja dockerissa VM kautta.
+
 ## Screenshots
 ### Entering Name
 Nimi kentä tulee ensiksi näkymään
