@@ -2,7 +2,7 @@
 
 käytetty tutoriaalia mikä opettaja oli antanut ja tästä lähetty uudistamaan tätä sekä lisätty muutamia uusia toimintoja. Vaihdoin var -> const. sekä tein omat tiedostot js ja tyyleille. Laitettu dockerin conttiin pyörimään locaalisti.
 
-nimiavaruus
+tehtävä 2 nimiavaruus
 
 Nimiavaruus(namespace) jakaa yhteyden eri kanaville. Tällä saadaan loogisuutta ohjelmaan.. Esimerkiksi oletusnimiarvaruus on (‘/‘), Tässä ohjelmassa voisi käyttää tälläistä nimiavaruuksia
     - (‘/chat’), jossa keskustelu tapahtuu
