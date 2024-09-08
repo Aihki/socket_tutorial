@@ -17,6 +17,7 @@ Huoneilla sitten tarkemmin jaetaan nimiavaruuden sisällä yhteyksiä. Roomit/hu
 
 
 viimeisen osan pientä selostusta mitä tein
+
 Yritin saada toimimaan ensiksi dockerin kautta mutta sitten huomasin että ohjeissa käytettiin aws. Elikkä Dockerissa se toimii vaan locaalisesti. Sitten katsoin miten saisin sen suoraan Azureen Web PubSub for Socket.IO kanssa . Tein siitä ohjeiden mukaan mitä linkin kautta löysin ja lisäsin serverille tieodsto(websocket ja serveri on samassa groupissa). Vähän säätelyiden jälkeen näytti toimivan monellilla node ja dockerissa VM kautta.
 
 ## Screenshots
