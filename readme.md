@@ -32,3 +32,7 @@ menee takaisin ensimmäiseen huoneeseen
 ### Tree user at the same time
 kolme käyttäjää missä yksi on kerran vaihtanut kanavaa ja tullut takaisi
 ![Going Back to First Room](ss/threeUsers.png)
+
+### azure sekä Web PubSub for Socket.IO
+sain laitettua azureen sekä Web PubSub for Socket.IO. Näytti toimivan node ja dockerilla
+![Going Back to First Room](ss/Azure.png)
