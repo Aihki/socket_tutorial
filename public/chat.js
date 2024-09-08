@@ -32,7 +32,7 @@ socket.on('reconnect_failed', () => {
   console.error('WebSocket reconnect failed');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const roomSelect = document.getElementById('room');
   const rooms = ['Music', 'Literature', 'Sports', 'Random'];
 
